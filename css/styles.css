@@ -86,6 +86,10 @@ ul{
     
 }
 
+.site-nav:active{
+    color: var(--button-color);
+} 
+
 .site-nav{
     display: flex;
     justify-content: center;
@@ -117,6 +121,8 @@ ul{
     font-size: 16px;
     line-height: 1.5;
     text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 
@@ -134,6 +140,8 @@ ul{
 .headline{
     background: var(--title-text-color);
     text-align: center;
+    padding-top: 192px;
+    padding-bottom: 192px;
 }
 
 .headline-title{
@@ -147,7 +155,23 @@ ul{
     margin-bottom: 48px;
 }
 
+.characteristic{
+    padding-top: 192px;
+    padding-bottom: 192px;
+}
 
+.hidden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 .list .title{
     color: var(--title-text-color);
     font-weight: 500;
@@ -155,17 +179,37 @@ ul{
     line-height: 1.2;
     margin-top: 0;
     margin-bottom: 8px;
-    text-align: center;
+    text-align: left;
 }
 
 .list{
     display: flex;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 
-.list li:not(:last-child){
+.list-team li{
+    width: calc((100% - 72px) / 4);
+}
+
+.desc li{
+    width: calc((100% - 72px) / 4);
+    margin-right: 24px; 
+}
+
+.items{
+    display: flex;
+}
+
+.list .list:not(:last-child){
     margin-right: 24px;   
 }
+
+.list .items li:not(:last-child){
+    margin-right: 24px;   
+}
+
 .list .text{
     font-weight: 400;
     font-size: 16px;
@@ -178,9 +222,14 @@ ul{
     margin-bottom: 8px;
 }
 
+
 .container .text{
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.image{
+    display: flex;
 }
 
 .list-team .title{
@@ -193,17 +242,39 @@ ul{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
+    
 }
-
+ 
+.title-list{
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 72px;
+}
   
 .list-team .list li:not(:last-child){
     margin-right: 24px;
+}
+
+.list-team .title-our-team{
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 72px;
 }
 
 
 
 .footer{
     background: var(--title-text-color);
+    padding-top: 100px;
+    padding-bottom: 100px ;
 }
 
 .footer .logo{
@@ -237,10 +308,27 @@ ul{
     padding: 16px 32px;
     min-width: 170px;
     text-align: center;
-    border: none;
+    border: 1px solid var(--button-color);
         
 }
 
+.button-picture{
+    color: var(--headline-title-color);
+    background: var(--button-color);
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 12px 24px;
+    min-width: 69px;
+    min-height: 48px;
+    text-align: center;
+    border: 1px solid var(--button-color);
+        
+}
 .button-primtary {
     color: var(--button-color);
     background: var(--footer-logo-color);
@@ -251,7 +339,7 @@ ul{
     letter-spacing: 0.04em;
     cursor: pointer;
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: 12px 24px;
     min-width: 69px;
     min-height: 48px;
     text-align: center;
@@ -261,10 +349,12 @@ ul{
 .button:hover,
 .button:focus,
 .button-primtary:hover,
-.button-primtary:focus {
+.button-primtary:focus, 
+.button-picture:hover,
+.button-picture:focus{
     background: var(--active-states-color);
     color: var(--headline-title-color);
-    border: none;
+    border: 1px solid var(--button-color);
 }
 
 .container{
@@ -276,18 +366,19 @@ ul{
 }
 
 .list-team{
-    background: var(--footer-logo-color);  
+    background: var(--footer-logo-color); 
+    padding-top: 120px;
+    padding-bottom: 120px; 
 }
 /* Portfolio */
-.portfolio{
-    text-align: center;
-}
+
 .primtary{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     align-items: center;
     justify-content: center;
+    margin-bottom: 72px;
 }
 
 .primtary li:not(:last-child){
@@ -297,16 +388,15 @@ ul{
 .element{
     display: flex;
     flex-wrap: wrap;
+    margin-right: -24px; ;
+    margin-bottom: -48px;
+
 }
 
 .element li{
     width: 360px;
     margin-right: 24px;
     margin-bottom: 48px;
-}
-
-.element li:nth-child(3n){
-    margin-right: 0;
 }
 
 .element li:nth-last-child(-n + 3){
@@ -320,5 +410,29 @@ ul{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     padding: 32px 52px 32px 16px;
     padding-bottom: 32px;
+}
+
+.picture{
+    padding-top: 196px;
+    padding-bottom: 120px;
+}
+
+.title-portfolio{
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+
+.text-portfolio{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 
