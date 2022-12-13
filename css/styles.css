@@ -36,6 +36,9 @@ body{
     justify-content: center;
    
 }
+.site-nav .webpage{
+    color: var(--button-color);   
+}
 
 .contacts{
     display: flex;
@@ -156,8 +159,8 @@ ul{
 }
 
 .characteristic{
-    padding-top: 192px;
-    padding-bottom: 192px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .hidden{
@@ -184,16 +187,19 @@ ul{
 
 .list{
     display: flex;
-    padding-top: 120px;
-    padding-bottom: 120px;
 }
 
+.work{
+    display: flex;
+    padding-top: 120px;
+    padding-bottom: 120px; 
+}
 
 .list-team li{
     width: calc((100% - 72px) / 4);
 }
 
-.desc li{
+.list .desc li{
     width: calc((100% - 72px) / 4);
     margin-right: 24px; 
 }
@@ -206,7 +212,7 @@ ul{
     margin-right: 24px;   
 }
 
-.list .items li:not(:last-child){
+.work .items li:not(:last-child){
     margin-right: 24px;   
 }
 
@@ -374,8 +380,6 @@ ul{
 
 .primtary{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     align-items: center;
     justify-content: center;
     margin-bottom: 72px;
@@ -413,7 +417,7 @@ ul{
 }
 
 .picture{
-    padding-top: 196px;
+    padding-top: 96px;
     padding-bottom: 120px;
 }
 
